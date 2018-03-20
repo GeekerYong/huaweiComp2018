@@ -72,6 +72,7 @@ def preprocess_ecs_info(ecs_lines, mission):
     flavor_dict = dict()
     for item in ecs_lines:
         values = item.split("\t")
+        print(values)
         vm_name = values[1]
         uuid = values[0]
         create_time = values[2].split(" ")[0]
@@ -93,7 +94,6 @@ def merge(data_dict, mission):
     data_dict_merge =dict()
     for key in keys:
         data_list = data_dict[key]
-        data_list_transformed = []
         last_day = data_list[0][1]
         flavor_num = 0
         for item in data_list:
