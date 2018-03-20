@@ -1,3 +1,6 @@
+# coding=utf-8
+import preprocessing
+
 
 def predict_vm(ecs_lines, input_lines):
     # Do your work from here#
@@ -9,13 +12,9 @@ def predict_vm(ecs_lines, input_lines):
         print 'input file information is none'
         return result
 
-    for index, item in ecs_lines:
-        values = item.split(" ")
-        uuid = values[0]
-        flavorName = values[1]
-        createTime = values[2]
 
-    for index, item in input_lines:
-        print "index of input data"
+    mission = preprocessing.preprocess_input(input_lines)
+
+    ecs_data = preprocessing.preprocess_ecs_info(ecs_lines, mission)
 
     return result
