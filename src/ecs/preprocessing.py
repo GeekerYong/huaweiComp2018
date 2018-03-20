@@ -28,7 +28,7 @@ def preprocess_input(input_lines):
     vm_info = []
     time_limit = []
     for line in input_lines:
-        if line != '\n':
+        if line != '\n': # linux下为\r\n
             if cnt == 0:
                 phy_cpu, phy_mem, phy_hard_disk = line.split(" ")
                 # print("0:" + line)
@@ -36,7 +36,7 @@ def preprocess_input(input_lines):
                 vm_info.append(line.replace('\n', ''))
                 # print("1:" + line)
             elif cnt == 2:
-                opt_target = line
+                opt_target = line.replace('\n', '')
                 # print("2:" + line)
             elif cnt == 3:
                 time_limit.append(line.replace('\n', ''))
@@ -68,26 +68,53 @@ def preprocess_ecs_info(ecs_lines, mission):
     :return:
             所有返回数据已剔除不相关的历史数据
             flavor_dict：以vm_name为键，键对应内容为list格式，包含所有该vm_name的历史请求数据。
-            ecs_data:以list存储的历史请求数据。
     """
-    flavor_dict = dict.fromkeys(mission.vm_type.keys(), [])
-    ecs_data = []
+    flavor_dict = dict()
     for item in ecs_lines:
         values = item.split("\t")
         vm_name = values[1]
-        if vm_name in flavor_dict.keys():
-            # 生成dict
-            info = []
-            uuid = values[0]
-            create_time = values[2].split(" ")[0]
-            info.append(uuid)
-            info.append(create_time)
-            flavor_dict[vm_name].append(info)
-            # 普通组织形式
-            info.append(vm_name)
-            ecs_data.append(info)
+        uuid = values[0]
+        create_time = values[2].split(" ")[0]
+        if vm_name in mission.vm_type.keys():
+            if vm_name not in flavor_dict.keys():
+                flavor_dict[vm_name] = [[uuid, create_time, vm_name]]
+            else:
+                flavor_dict[vm_name].append([uuid, create_time, vm_name])
         else:
             continue
         # print("用户id：%s 配置名称:%s 创建时间:%s" % (uuid, flavorName, createTime))
     print("ecs_data处理完毕")
-    return flavor_dict,ecs_data
+    return flavor_dict
+
+
+def merge(data_dict, mission):
+    # 按flavor,合并同一日期的数据
+    keys = data_dict.keys()
+    data_dict_merge =dict()
+    for key in keys:
+        data_list = data_dict[key]
+        data_list_transformed = []
+        last_day = data_list[0][1]
+        flavor_num = 0
+        for item in data_list:
+            cur_day = item[1]
+            if cur_day == last_day:
+                flavor_num += 1
+            else:
+                if (key not in data_dict_merge.keys()):
+                    data_dict_merge[key] = [[last_day, flavor_num]]
+                else:
+                    data_dict_merge[key].append([last_day, flavor_num])
+                flavor_num = 1
+            last_day = cur_day
+        # 处理最后一个日期下的数据
+        if (key not in data_dict_merge.keys()):
+            data_dict_merge[key] = [[last_day, flavor_num]]
+        else:
+            data_dict_merge[key].append([last_day, flavor_num])
+    print("分析完成")
+    return data_dict_merge
+    # if mission.opt_target == "CPU":
+    #     return None
+    # else:
+    #     return None

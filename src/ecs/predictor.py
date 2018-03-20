@@ -12,9 +12,10 @@ def predict_vm(ecs_lines, input_lines):
         print 'input file information is none'
         return result
 
-
     mission = preprocessing.preprocess_input(input_lines)
 
-    ecs_data = preprocessing.preprocess_ecs_info(ecs_lines, mission)
+    flavor_dict = preprocessing.preprocess_ecs_info(ecs_lines, mission)
 
+    data_dict_merge = preprocessing.merge(flavor_dict, mission)
+    print("a")
     return result
