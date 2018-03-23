@@ -5,6 +5,8 @@
 #  @Description:
 #           This script contains the functions needed for preprocessing
 
+import datetime
+
 
 class Mission:
 
@@ -28,7 +30,7 @@ def preprocess_input(input_lines):
     vm_info = []
     time_limit = []
     for line in input_lines:
-        if line != '\n': # linux下为\r\n
+        if line != '\n':  # linux下为\r\n
             if cnt == 0:
                 phy_cpu, phy_mem, phy_hard_disk = line.split(" ")
                 # print("0:" + line)
@@ -91,7 +93,7 @@ def preprocess_ecs_info(ecs_lines, mission):
 def merge(data_dict, mission):
     # 按flavor,合并同一日期的数据
     keys = data_dict.keys()
-    data_dict_merge =dict()
+    data_dict_merge = dict()
     for key in keys:
         data_list = data_dict[key]
         last_day = data_list[0][1]
@@ -118,3 +120,24 @@ def merge(data_dict, mission):
     #     return None
     # else:
     #     return None
+
+
+def fill_data(merge_data, mission):
+    for key in merge_data.keys():
+        data = merge_data[key]
+        new_data = []
+        start_date = datetime.datetime.strptime(data[0][0], '%Y-%m-%d')
+        end_date = datetime.datetime.strptime(data[len(data) - 1][0], '%Y-%m-%d')
+        date_list = [d[0] for d in data]
+        date_list_comp = []
+        for i in range((end_date-start_date).days+1):
+            now_date = start_date + datetime.timedelta(days=i)
+            date_list_comp.append(now_date.strftime('%Y-%m-%d'))
+        for date in date_list_comp:
+            if date in date_list:
+                new_data.append(data[date_list.index(date)])
+            else:
+                new_data.append([date, 0])
+        merge_data[key] = new_data
+    print("生成初始日期")
+    return merge_data
