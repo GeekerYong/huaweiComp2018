@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1523423996 source:c:\users\sw\desktop\2018华为软件精英挑战赛\候选模型\huawei\ar.cpp
+	"ar.h"
+	"malloc.h"
+	"math.h"
+
+1523424160 c:\users\sw\desktop\2018华为软件精英挑战赛\候选模型\huawei\ar.h
+
+1274846244 source:c:\users\sw\desktop\2018华为软件精英挑战赛\候选模型\huawei\testar.cpp
+	"stdafx.h"
+
+1274846244 c:\users\sw\desktop\2018华为软件精英挑战赛\候选模型\huawei\stdafx.h
+	<windows.h>
+
+1523430331 source:c:\users\sw\desktop\2018华为软件精英挑战赛\sdk-python\src\ecs\c\huawei\ar.cpp
+	"ar.h"
+	"malloc.h"
+	"math.h"
+	<iostream>
+	<fstream>
+	<string>
+
+1523424160 c:\users\sw\desktop\2018华为软件精英挑战赛\sdk-python\src\ecs\c\huawei\ar.h
+

@@ -74,7 +74,7 @@ def preprocess_ecs_info(ecs_lines, mission):
     flavor_dict = dict()
     for item in ecs_lines:
         values = item.split("\t")
-        print(values)
+        #print(values)
         vm_name = values[1]
         uuid = values[0]
         create_time = values[2].split(" ")[0]
@@ -127,10 +127,10 @@ def fill_data(merge_data, mission):
         data = merge_data[key]
         new_data = []
         start_date = datetime.datetime.strptime(data[0][0], '%Y-%m-%d')
-        end_date = datetime.datetime.strptime(data[len(data) - 1][0], '%Y-%m-%d')
+        end_date = datetime.datetime.strptime(mission.time_limit[0].split(' ')[0], '%Y-%m-%d')
         date_list = [d[0] for d in data]
         date_list_comp = []
-        for i in range((end_date-start_date).days+1):
+        for i in range((end_date-start_date).days):
             now_date = start_date + datetime.timedelta(days=i)
             date_list_comp.append(now_date.strftime('%Y-%m-%d'))
         for date in date_list_comp:
