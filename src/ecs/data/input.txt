@@ -10,14 +10,13 @@ flavor6 1 1024
 flavor7 1 60000
 flavor8 10 10000
 flavor9 10 1024
-flavor10 1 1024
 flavor11 1 1024
 flavor12 1 1024
 flavor13 1 1024
 flavor14 1 1024
 flavor15 1 1024
 
-MEM
+CPU
 
 2015-02-20 00:00:00
 2015-04-27 00:00:00
