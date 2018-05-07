@@ -4,62 +4,7 @@
     <list default="true" id="3fcc17d7-a9f9-443e-9f81-8f35eb364a62" name="Default" comment="增加一定注释">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/anlgopt.py" afterPath="$PROJECT_DIR$/src/ecs/anlgopt.py" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/ar_leq.exe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/ar_maxe.exe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor1.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor10.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor10_out.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor11.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor11_out.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor12.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor12_out.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor13.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor13_out.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor14.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor14_out.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor15.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor15_out.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor1_out.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor2.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor2_out.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor3.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor3_out.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor4.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor4_out.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor5.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor5_out.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor6.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor6_out.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor7.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor7_out.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor8.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor8_out.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor9.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavor9_out.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/flavorname.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/huawei/ReadMe.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/huawei/StdAfx.cpp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/huawei/StdAfx.h" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/huawei/TestAr.cpp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/huawei/TestAr.dsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/huawei/TestAr.dsw" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/huawei/TestAr.plg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/huawei/ar.cpp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/huawei/ar.h" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/huawei/bin/Debug/huawei.exe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/huawei/huawei.cbp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/huawei/huawei.depend" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/huawei/huawei.layout" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/huawei/obj/Debug/StdAfx.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/huawei/obj/Debug/TestAr.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/huawei/obj/Debug/ar.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/huawei/r.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/c/r.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/ecs/data/input.txt" afterPath="$PROJECT_DIR$/src/ecs/data/input.txt" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/nn.py" afterPath="$PROJECT_DIR$/src/ecs/nn.py" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/predictor.py" afterPath="$PROJECT_DIR$/src/ecs/predictor.py" />
-      <change beforePath="$PROJECT_DIR$/src/ecs/preprocessing.py" afterPath="$PROJECT_DIR$/src/ecs/preprocessing.py" />
       <change beforePath="$PROJECT_DIR$/src/ecs/result/output.txt" afterPath="$PROJECT_DIR$/src/ecs/result/output.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -163,8 +108,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+            <state relative-caret-position="30">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -455,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521518776562</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="增加一定注释">
+      <created>1525660994951</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1525660994951</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -492,7 +444,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加input与ecs信息的处理函数" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加input与ecs信息的处理函数" />
+    <MESSAGE value="增加一定注释" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加一定注释" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -838,8 +791,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        <state relative-caret-position="30">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
