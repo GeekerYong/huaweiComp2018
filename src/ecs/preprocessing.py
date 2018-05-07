@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*- 
 #  @Time : 2018-03-20 10:38
-#  @Author : Liu JinYong
+#  @Author : GeekerYong
 #  @File : preprocessing.py
 #  @Description:
 #           This script contains the functions needed for preprocessing

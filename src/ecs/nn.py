@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*- 
 #  @Time : 2018-04-12 15:26
-#  @Author : Liu JinYong
+#  @Author : GeekerYong
 #  @File : nn.py
 #  @Description:
 #            neural network

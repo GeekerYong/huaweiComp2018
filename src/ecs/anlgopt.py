@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*- 
 #  @Time : 2018-04-13 9:58
-#  @Author : Liu JinYong
+#  @Author : GeekerYong
 #  @File : anlgopt.py
 #  @Description:
 #            模拟退火
@@ -10,22 +10,24 @@ import random
 import copy
 import math
 from operator import itemgetter
-
+import time
 
 def annealingoptimize(pred_result_dict, mission, T=100000.0, cool=0.99, step=1):
 
-    pred_result = [[i, pred_result_dict[i]] for i in pred_result_dict.keys()]
+    pred_result = [[i, pred_result_dict[i],0] for i in pred_result_dict.keys()]
     for item in pred_result:
         name = item[0]
         n_mem = int(mission.vm_type[name][1])
         n_cpu = int(mission.vm_type[name][0])
         cost = item[1]*n_mem*n_cpu*0.00001
-        item[1] = cost
-    pred_result_list = sorted(pred_result, key=itemgetter(1))
+        item[2] = cost
+    pred_result_list = sorted(pred_result, key=itemgetter(2))
     best_phy_server = dict()
     best_cost = 99999999
     cnt = 0
-    while T > 0.00001:
+    start = time.time()
+
+    while (time.time() - start)<15:
         vec = [random.randint(0, len(pred_result_list)-1) for i in range(len(pred_result_list))]  # 骰子,会更换前两个数代表的服务器
         if vec[0] != vec[1]:
             pred_result_list[vec[0]],pred_result_list[vec[1]] = pred_result_list[vec[1]],pred_result_list[vec[0]] # 被选中的服务器进行交换
@@ -53,6 +55,7 @@ def annealingoptimize(pred_result_dict, mission, T=100000.0, cool=0.99, step=1):
                         phy_server_usage[server] = usage_update # 更新空闲空间
                         phy_server[server].append(item[0]) # 放置进去
                         flag = 1
+                        break
                 if flag==0:
                     n_phy = n_phy + 1
                     phy_server[n_phy] = []
